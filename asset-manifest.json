@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/gym-website/static/css/main.9ad477bb.css",
+    "main.js": "/gym-website/static/js/main.1d58ca11.js",
+    "static/media/trainer.png": "/gym-website/static/media/trainer.d5ac997315b633881155.png",
+    "static/media/gym-02.png": "/gym-website/static/media/gym-02.06fd85c2c7a9d0f48978.png",
+    "static/media/yoga-pose.png": "/gym-website/static/media/yoga-pose.1009817918cc6df26064.png",
+    "static/media/extended.png": "/gym-website/static/media/extended.65fee2ef368e447527a7.png",
+    "static/media/lunges.png": "/gym-website/static/media/lunges.52e48615ce527a095bcf.png",
+    "index.html": "/gym-website/index.html",
+    "main.9ad477bb.css.map": "/gym-website/static/css/main.9ad477bb.css.map",
+    "main.1d58ca11.js.map": "/gym-website/static/js/main.1d58ca11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ad477bb.css",
+    "static/js/main.1d58ca11.js"
+  ]
+}
