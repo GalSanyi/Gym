@@ -53,6 +53,9 @@ const Hero = () => {
                   gym near you
                 </h5>
               </div>
+              <div className="dumble__icon">
+                <img src={dumbleIcon} alt="icon" />
+              </div>
               <div className="heart__rate">
                 <h5>Heart Rate</h5>
                 <span>
@@ -60,10 +63,6 @@ const Hero = () => {
                 </span>
                 <h6>2567 BPM</h6>
               </div>
-            </div>
-
-            <div className="dumble__icon">
-              <img src={dumbleIcon} alt="icon" />
             </div>
           </div>
         </div>

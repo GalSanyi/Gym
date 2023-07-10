@@ -1,3 +1,5 @@
+
+
 import '../style/header.css';
 import { useState, useEffect, useRef } from 'react';
 import logo from '../../assets/img/dumble.png';
@@ -26,40 +28,32 @@ const nav__link = [
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const menuRef = useRef(null);
+ 
+  const headerRef = useRef(null);
 
+  const headerFun = () => {
+    if (
+      document.body.scrollTop > 80 ||
+      document.documentElement.scrollTop > 80
+    ) {
+      headerRef.current.classList.add('sticky-header');
+    }else{
+      headerRef.current.classList.remove('sticky-header');
+    }
+  };
   const handleToggleMenu = () => {
     setShow(!show);
   };
+useEffect(() => {
+  window.addEventListener('scroll', headerFun);
+  return () => {
+    window.removeEventListener('scroll', headerFun);
+  };
+},[])
 
-  useEffect(() => {
-    const handleOutsideClick = event => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !event.target.classList.contains('mobile__menu')
-      ) {
-        setShow(false);
-      }
-    };
-
-    const handleEscapeKey = event => {
-      if (event.key === 'Escape') {
-        setShow(false);
-      }
-    };
-
-    document.addEventListener('keydown', handleEscapeKey);
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
 
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="container">
         <div className="nav__wrapper">
           {/* logo */}

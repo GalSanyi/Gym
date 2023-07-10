@@ -65,9 +65,9 @@ li {
   padding: 0px 15px;
   margin: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
   .container {
-    width: 480px;
+    width: 400px;
   }
 }
 
