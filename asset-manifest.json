@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Gym/static/css/main.9ad477bb.css",
-    "main.js": "/Gym/static/js/main.10d0ab86.js",
+    "main.css": "/Gym/static/css/main.23707bbf.css",
+    "main.js": "/Gym/static/js/main.014372fa.js",
     "static/media/trainer.png": "/Gym/static/media/trainer.d5ac997315b633881155.png",
     "static/media/gym-02.png": "/Gym/static/media/gym-02.06fd85c2c7a9d0f48978.png",
+    "static/media/avatar02.png": "/Gym/static/media/avatar02.43d3323871cb17add5e2.png",
+    "static/media/avatar01.png": "/Gym/static/media/avatar01.712b9be90c75dec89232.png",
     "static/media/yoga-pose.png": "/Gym/static/media/yoga-pose.1009817918cc6df26064.png",
     "static/media/extended.png": "/Gym/static/media/extended.65fee2ef368e447527a7.png",
     "static/media/lunges.png": "/Gym/static/media/lunges.52e48615ce527a095bcf.png",
     "index.html": "/Gym/index.html",
-    "main.9ad477bb.css.map": "/Gym/static/css/main.9ad477bb.css.map",
-    "main.10d0ab86.js.map": "/Gym/static/js/main.10d0ab86.js.map"
+    "main.23707bbf.css.map": "/Gym/static/css/main.23707bbf.css.map",
+    "main.014372fa.js.map": "/Gym/static/js/main.014372fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ad477bb.css",
-    "static/js/main.10d0ab86.js"
+    "static/css/main.23707bbf.css",
+    "static/js/main.014372fa.js"
   ]
 }
