@@ -6,9 +6,10 @@ import Pricing from './UI/Pricing';
 import Testimonials from './UI/Testimonials';
 import Footer from './UI/Footer';
 
+
 export const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <Exercise />
@@ -16,6 +17,7 @@ export const App = () => {
       <Pricing />
       <Testimonials />
       <Footer />
-    </div>
+   
+    </>
   );
 };

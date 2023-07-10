@@ -1,5 +1,3 @@
-
-
 import '../style/header.css';
 import { useState, useEffect, useRef } from 'react';
 import logo from '../../assets/img/dumble.png';
@@ -28,7 +26,7 @@ const nav__link = [
 
 const Header = () => {
   const [show, setShow] = useState(false);
- 
+
   const headerRef = useRef(null);
 
   const headerFun = () => {
@@ -37,20 +35,19 @@ const Header = () => {
       document.documentElement.scrollTop > 80
     ) {
       headerRef.current.classList.add('sticky-header');
-    }else{
+    } else {
       headerRef.current.classList.remove('sticky-header');
     }
   };
   const handleToggleMenu = () => {
     setShow(!show);
   };
-useEffect(() => {
-  window.addEventListener('scroll', headerFun);
-  return () => {
-    window.removeEventListener('scroll', headerFun);
-  };
-},[])
-
+  useEffect(() => {
+    window.addEventListener('scroll', headerFun);
+    return () => {
+      window.removeEventListener('scroll', headerFun);
+    };
+  }, []);
 
   return (
     <header className="header" ref={headerRef}>
