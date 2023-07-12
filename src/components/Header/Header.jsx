@@ -28,7 +28,7 @@ const Header = () => {
   const [show, setShow] = useState(false);
 
   const headerRef = useRef(null);
-
+  const closeMenu = () => setShow(false);
   const headerFun = () => {
     if (
       document.body.scrollTop > 80 ||
@@ -39,9 +39,7 @@ const Header = () => {
       headerRef.current.classList.remove('sticky-header');
     }
   };
-  const handleToggleMenu = () => {
-    setShow(!show);
-  };
+
   useEffect(() => {
     window.addEventListener('scroll', headerFun);
     return () => {
@@ -68,12 +66,14 @@ const Header = () => {
             }
           >
             <ul className="menu">
-              <span className="close__menu" onClick={handleToggleMenu}>
+              <span className="close__menu" onClick={() => setShow(!show)}>
                 <AiOutlineClose />
               </span>
               {nav__link.map(item => (
                 <li key={uuidv4()} className="nav__item">
-                  <a href={item.path}>{item.display}</a>
+                  <a href={item.path} onClick={closeMenu}>
+                    {item.display}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -82,7 +82,7 @@ const Header = () => {
           {/* nav right */}
           <div className="nav-right">
             <button className="register__btn">Register</button>
-            <span className="mobile__menu" onClick={handleToggleMenu}>
+            <span className="mobile__menu" onClick={() => setShow(!show)}>
               <BsList />
             </span>
           </div>
