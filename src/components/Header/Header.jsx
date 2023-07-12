@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const nav__link = [
   {
-    path: '#home',
+    path: '#',
     display: 'Home',
   },
   {
@@ -28,7 +28,7 @@ const Header = () => {
   const [show, setShow] = useState(false);
 
   const headerRef = useRef(null);
-  const closeMenu = () => setShow(false);
+
   const headerFun = () => {
     if (
       document.body.scrollTop > 80 ||
@@ -46,6 +46,28 @@ const Header = () => {
       window.removeEventListener('scroll', headerFun);
     };
   }, []);
+  const handleClick = e => {
+    e.preventDefault();
+    const targetAttr = e.target.getAttribute('href');
+    if (targetAttr === '#') {
+      // Handle the case where the targetAttr is '#' (or any other specific value)
+      // For example, you can scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Optionally add smooth scrolling behavior
+      });
+    } else {
+      const targetElement = document.querySelector(targetAttr);
+      if (targetElement) {
+        const location = targetElement.offsetTop;
+        window.scrollTo({
+          left: 0,
+          top: location - 50,
+          behavior: 'smooth', // Optionally add smooth scrolling behavior
+        });
+      }
+    }
+  };
 
   return (
     <header className="header" ref={headerRef}>
@@ -54,7 +76,7 @@ const Header = () => {
           {/* logo */}
           <div className="logo">
             <div className="logo__img">
-              <img src={logo} alt="" />
+              <img src={logo} alt="Logo" />
             </div>
             <h2>FitBody</h2>
           </div>
@@ -71,7 +93,7 @@ const Header = () => {
               </span>
               {nav__link.map(item => (
                 <li key={uuidv4()} className="nav__item">
-                  <a href={item.path} onClick={closeMenu}>
+                  <a onClick={handleClick} href={item.path}>
                     {item.display}
                   </a>
                 </li>

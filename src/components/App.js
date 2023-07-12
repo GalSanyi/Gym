@@ -5,9 +5,13 @@ import Start from './UI/Start';
 import Pricing from './UI/Pricing';
 import Testimonials from './UI/Testimonials';
 import Footer from './UI/Footer';
-
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 export const App = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
       <Header />
@@ -17,7 +21,6 @@ export const App = () => {
       <Pricing />
       <Testimonials />
       <Footer />
-   
     </>
   );
 };

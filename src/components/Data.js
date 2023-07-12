@@ -7,4 +7,8 @@ export const Data = [
     title: 'Quick Links',
     content: ['About us', 'Contact us', 'Support'],
   },
+  {
+    title: 'Legal',
+    content: ['Terms of use', 'Privacy Policy', 'Legal notice'],
+  },
 ];

@@ -52,10 +52,15 @@
   transition: height 0.3s ease-in-out;
   display: block;
 }
+.footer__box {
+  margin-bottom: 1rem;
+}
+.footer__box:last-child {
+  margin-bottom: 0;
+}
 @media only screen and (min-width: 768px) {
   .footer__wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     column-gap: 2rem;
   }
@@ -63,16 +68,26 @@
   .footer__box {
     width: 33%;
   }
+  .accordion {
+    display: initial;
+    justify-content: initial;
+    align-items: initial;
+    padding: initial;
+    background: initial;
+  }
   .accordion span {
     display: none;
   }
+  .footer__box {
+    margin-bottom: 0;
+  }
+  .accordion__content {
+    background: initial;
+    padding: initial;
+    display: block;
+  }
 }
-.footer__box {
-  margin-bottom: 1rem;
-}
-.footer__box:last-child {
-  margin-bottom: 0;
-}
+
 @media only screen and (min-width: 1140px) {
   .footer__wrapper {
     display: flex;

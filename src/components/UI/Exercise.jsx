@@ -4,7 +4,7 @@ import yoga from '../../assets/img/yoga-pose.png';
 import extended from '../../assets/img/extended.png';
 const Exercise = () => {
   return (
-    <section>
+    <section id="schedule">
       <div className="container exercise__container">
         <div className="exercise__top">
           <h2 className="section__title">
@@ -20,7 +20,11 @@ const Exercise = () => {
         </div>
         {/* Exercise List */}
         <div className="exercise__wrapper">
-          <div className="exercise__item">
+          <div
+            className="exercise__item"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <span className="exercise__icon">
               <img src={lunges} alt="Luges" />
             </span>
@@ -34,7 +38,11 @@ const Exercise = () => {
             </div>
           </div>
 
-          <div className="exercise__item">
+          <div
+            className="exercise__item"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <span className="exercise__icon">
               <img src={yoga} alt="Yoga" />
             </span>
@@ -48,7 +56,11 @@ const Exercise = () => {
             </div>
           </div>
 
-          <div className="exercise__item">
+          <div
+            className="exercise__item"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <span className="exercise__icon">
               <img src={extended} alt="Extended" />
             </span>
